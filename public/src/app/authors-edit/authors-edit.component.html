@@ -1,0 +1,12 @@
+<a [routerLink]="['/']" >Home</a>
+<p>Edit this author:</p>
+<fieldset>
+  <form (submit)="onSubmitEditAuthor()" >
+    <p>Name:
+      <input type="text" [(ngModel)]="author.name" name="author.name" id="">
+    </p>
+    <p *ngIf="errors.name" ><b>{{errors.name.message}}</b></p>
+    <input type="submit" value="Submit">
+    <button [routerLink]="['/']" >Cancel</button>
+  </form>
+</fieldset>

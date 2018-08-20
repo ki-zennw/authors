@@ -1,0 +1,5 @@
+<a [routerLink]="['/']" >Home</a>
+<h2>Details for {{author.name}}</h2>
+<p>It's just the name: {{author.name}}</p>
+<button [routerLink]="['/edit', author._id]" >Edit</button>
+<button (click)="onButtonClickDelete(author._id)" >Delete</button>

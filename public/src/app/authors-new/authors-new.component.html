@@ -1,0 +1,12 @@
+<a [routerLink]="['/']" >Home</a>
+<p>Add a new author:</p>
+<fieldset>
+  <form (submit)="onSubmitCreateAuthor()" >
+    <p>Name:
+      <input type="text" [(ngModel)]="newAuthor.name" name="newAuthor.name" id="">
+    </p>
+    <p *ngIf="errors.name" ><b>{{errors.name.message}}</b></p>
+    <input type="submit" value="Submit">
+    <button [routerLink]="['/']" >Cancel</button>
+  </form>
+</fieldset>
